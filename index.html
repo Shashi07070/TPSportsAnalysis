@@ -4,60 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tipping Point - Expert Sports Analysis Hub</title>
-    <meta name="description" content="Join India's premium community for Cricket, Football, and Tennis tactical analysis and data-driven match previews.">
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
     <style>
-        /* --- ADVANCED COLOR PALETTE (Dark Mode Sports Theme) --- */
+        /* COLORS & RESET */
         :root {
-            --primary-dark: #0a192f; /* Deepest Navy Background */
-            --secondary-dark: #172a45; /* Card Background */
-            --accent-orange: #ff9f1c; /* Vibrant Action Color */
-            --accent-blue: #4db5ff; /* Data/Tech Blue */
-            --text-light: #e6f1ff; /* Main White Text */
-            --text-gray: #8892b0; /* Subtitle Gray Text */
+            --primary-dark: #0a192f; 
+            --secondary-dark: #172a45; 
+            --accent-orange: #ff9f1c; 
+            --accent-blue: #4db5ff; 
+            --text-light: #e6f1ff; 
+            --text-gray: #8892b0;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
             font-family: 'Open Sans', sans-serif;
-            background-color: #020c1b; /* Very dark background for outside the container */
+            background-color: #020c1b;
             color: var(--text-light);
-            line-height: 1.6;
             display: flex;
             justify-content: center;
             min-height: 100vh;
         }
 
-        /* MOBILE-FIRST PREMIUM CONTAINER */
         .container {
             width: 100%;
             max-width: 480px;
             background: var(--primary-dark);
-            box-shadow: 0 0 30px rgba(0,0,0,0.5);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            border-right: 1px solid #1e3a5f;
             border-left: 1px solid #1e3a5f;
+            border-right: 1px solid #1e3a5f;
         }
 
-        /* HEADER SECTION */
         header {
             background: rgba(10, 25, 47, 0.95);
             padding: 20px;
             text-align: center;
             border-bottom: 2px solid var(--accent-orange);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(10px);
+            position: sticky; top: 0; z-index: 100;
         }
 
         h1.logo {
@@ -65,152 +53,75 @@
             font-weight: 900;
             font-size: 26px;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            letter-spacing: 1px;
             color: var(--text-light);
         }
 
-        .highlight {
-            color: var(--accent-orange);
-        }
+        .highlight { color: var(--accent-orange); }
 
-        /* HERO IMAGE BANNER */
+        /* HERO BANNER SECTION - CUSTOM IMAGE */
         .hero-banner {
-            /* PLACEHOLDER IMAGE - Replace url below with a combined sports image */
-            background-image: linear-gradient(to bottom, rgba(10,25,47,0.3), rgba(10,25,47,1)), url('https://images.unsplash.com/photo-1560272564-c83b66b1ad12?q=80&w=1000&auto=format&fit=crop');
+            /* 👇 REPLACE 'banner.jpg' WITH YOUR FILE NAME OR URL 👇 
+               If you don't have the image yet, it will show a dark blue color.
+            */
+            background-image: linear-gradient(to bottom, rgba(10,25,47,0.1), rgba(10,25,47,1)), url('https://i.postimg.cc/XYgh2S1L/Picsart-25-11-30-13-27-15-145.jpg');
+            
             background-size: cover;
             background-position: center;
             height: 220px;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
+            width: 100%;
+            background-color: #172a45; /* Fallback color */
         }
         
-        /* MAIN CONTENT AREA */
-        .content-area {
-            padding: 25px 20px;
-            text-align: center;
-            flex-grow: 1;
-        }
+        .content-area { padding: 25px 20px; text-align: center; flex-grow: 1; }
 
         h2.main-headline {
             font-family: 'Montserrat', sans-serif;
             font-size: 28px;
             font-weight: 800;
-            margin-bottom: 15px;
-            line-height: 1.2;
-            background: linear-gradient(to right, var(--text-light), var(--accent-blue));
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #fff, #4db5ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        p.sub-headline {
-            font-size: 16px;
-            color: var(--text-gray);
-            margin-bottom: 30px;
-        }
+        p.sub-headline { font-size: 15px; color: var(--text-gray); margin-bottom: 30px; }
 
-        /* PREMIUM CTA BUTTON */
+        /* BUTTON */
         .cta-button {
-            display: block;
-            width: 100%;
-            /* Gradient Orange Button */
+            display: block; width: 100%;
             background: linear-gradient(45deg, #ff9f1c, #ff6600);
-            color: white;
-            padding: 18px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 800;
-            font-size: 20px;
-            text-transform: uppercase;
+            color: white; padding: 18px; border-radius: 12px;
+            text-decoration: none; font-family: 'Montserrat', sans-serif;
+            font-weight: 800; font-size: 20px; text-transform: uppercase;
             box-shadow: 0 10px 20px -10px rgba(255, 159, 28, 0.5);
-            transition: all 0.3s ease;
             margin-bottom: 35px;
-            border: 2px solid transparent;
         }
 
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px -10px rgba(255, 159, 28, 0.7);
-            border-color: var(--text-light);
-        }
-
-        /* SPORTS FEATURE CARDS (The biggest upgrade) */
-        .sports-grid {
-            display: grid;
-            gap: 15px;
-            margin-bottom: 30px;
-        }
+        /* SPORTS GRID */
+        .sports-grid { display: grid; gap: 15px; margin-bottom: 30px; }
 
         .sport-card {
             background: var(--secondary-dark);
-            border-radius: 12px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            text-align: left;
+            border-radius: 12px; overflow: hidden;
+            display: flex; align-items: center; text-align: left;
             border: 1px solid #1e3a5f;
-            transition: transform 0.2s;
         }
 
-        .sport-card:hover {
-            border-color: var(--accent-blue);
-            transform: translateX(5px);
-        }
+        .card-image { width: 90px; height: 90px; background-size: cover; background-position: center; flex-shrink: 0; }
 
-        .card-image {
-            width: 90px;
-            height: 90px;
-            background-size: cover;
-            background-position: center;
-            flex-shrink: 0;
-        }
+        /* FIXED IMAGE URLS */
+        .img-cricket { background-image: url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=300&auto=format&fit=crop'); }
+        .img-football { background-image: url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=300&auto=format&fit=crop'); }
+        /* FIXED TENNIS IMAGE 👇 */
+        .img-tennis { background-image: url('https://images.unsplash.com/photo-1622163642998-1ea36b1ad365?q=80&w=300&auto=format&fit=crop'); }
 
-        /* Image Placeholders - Replace URLs for better branding */
-        .img-cricket { background-image: url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=200&auto=format&fit=crop'); }
-        .img-football { background-image: url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=200&auto=format&fit=crop'); }
-        .img-tennis { background-image: url('https://images.unsplash.com/photo-1622163642998-1ea36b1ad365?q=80&w=200&auto=format&fit=crop'); }
+        .card-text { padding: 15px; }
+        .card-text h3 { font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 5px; color: var(--accent-blue); }
+        .card-text p { font-size: 13px; color: var(--text-gray); line-height: 1.3; }
 
-        .card-text {
-            padding: 15px;
-        }
-
-        .card-text h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 16px;
-            font-weight: 700;
-            margin-bottom: 5px;
-            color: var(--accent-blue);
-        }
-
-        .card-text p {
-            font-size: 13px;
-            color: var(--text-gray);
-            line-height: 1.4;
-        }
-
-        /* SAFETY FOOTER */
-        footer {
-            background: #050f1e;
-            padding: 25px 20px;
-            text-align: center;
-            font-size: 11px;
-            color: #55657e;
-            border-top: 1px solid #1e3a5f;
-        }
-
-        .footer-links a {
-            color: var(--text-gray);
-            text-decoration: none;
-            margin: 0 8px;
-            font-weight: 600;
-        }
-
-        .disclaimer {
-            margin-top: 15px;
-            line-height: 1.5;
-            opacity: 0.7;
-        }
+        footer { background: #050f1e; padding: 25px 20px; text-align: center; font-size: 11px; color: #55657e; border-top: 1px solid #1e3a5f; }
+        .footer-links a { color: var(--text-gray); text-decoration: none; margin: 0 5px; }
     </style>
 </head>
 <body>
@@ -220,40 +131,34 @@
             <h1 class="logo">Tipping <span class="highlight">Point</span></h1>
         </header>
 
-        <div class="hero-banner">
-            </div>
+        <div class="hero-banner"></div>
 
         <div class="content-area">
             <h2 class="main-headline">ELITE SPORTS INTELLIGENCE</h2>
-            <p class="sub-headline">Stop guessing. Access data-driven match previews and tactical analysis for Cricket, Football, and Tennis.</p>
+            <p class="sub-headline">Data-driven match previews and tactical analysis for Cricket, Football, and Tennis.</p>
 
-            <a href="https://t.me/+I63LMPSjFvwxOGU1" class="cta-button">
-                JOIN FREE ACCESS 🚀
-            </a>
+            <a href="https://t.me/+I63LMPSjFvwxOGU1" class="cta-button">JOIN FREE ACCESS 🚀</a>
 
-            <p style="color:var(--text-gray); margin-bottom: 15px; font-weight: 600; letter-spacing: 1px;">WHAT WE ANALYZE:</p>
             <div class="sports-grid">
                 <div class="sport-card">
                     <div class="card-image img-cricket"></div>
                     <div class="card-text">
                         <h3>CRICKET HUB</h3>
-                        <p>Pitch reports, Playing XI, and player matchup data.</p>
+                        <p>Pitch reports & Playing XI data.</p>
                     </div>
                 </div>
-                
                 <div class="sport-card">
                     <div class="card-image img-football"></div>
                     <div class="card-text">
                         <h3>FOOTBALL TACTICS</h3>
-                        <p>Team form, H2H history, and expected lineups.</p>
+                        <p>Team form & H2H history.</p>
                     </div>
                 </div>
-
                 <div class="sport-card">
                     <div class="card-image img-tennis"></div>
                     <div class="card-text">
                         <h3>TENNIS INSIGHTS</h3>
-                        <p>Surface analysis and tournament performance trends.</p>
+                        <p>Surface analysis & trends.</p>
                     </div>
                 </div>
             </div>
@@ -261,15 +166,10 @@
 
         <footer>
             <div class="footer-links">
-                <a href="#">Privacy Policy</a> • 
-                <a href="#">Terms</a> • 
-                <a href="#">Contact</a>
-            </div>
-            <div class="disclaimer">
-                <strong>Disclaimer:</strong> Tipping Point is an information platform providing sports statistics and analysis for educational purposes only. We do not support or promote illegal betting or gambling activities. Please act responsibly based on your local laws.
+                <a href="#">Privacy</a> • <a href="#">Terms</a> • <a href="#">Contact</a>
             </div>
             <br>
-            <p>&copy; 2025 Tipping Point Analysis.</p>
+            <p><strong>Disclaimer:</strong> This platform is for informational purposes only. We provide stats and analysis. We do not support illegal betting.</p>
         </footer>
     </div>
 
