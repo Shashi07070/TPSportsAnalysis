@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipping Point - Expert Sports Analysis</title>
+    <meta name="description" content="Join India's smartest community for cricket and tennis match previews and statistical analysis.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* CORE RESET & COLORS */
+        :root {
+            --primary: #0056b3; /* Trust Blue */
+            --accent: #ff6600;  /* Energetic Orange */
+            --dark: #1a1a1a;
+            --light: #f4f7f6;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* MOBILE-FIRST CONTAINER */
+        .container {
+            width: 100%;
+            max-width: 480px; /* Limits width to look like an App/Linktree */
+            background: var(--white);
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* HEADER SECTION */
+        header {
+            background: var(--dark);
+            color: var(--white);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+        }
+
+        h1.logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .highlight {
+            color: var(--accent);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 40px 20px;
+            text-align: center;
+            flex-grow: 1; /* Pushes footer down */
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        p.sub-headline {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* CTA BUTTON (The most important part) */
+        .cta-button {
+            display: block;
+            width: 100%;
+            background: #0088cc; /* Telegram Blue */
+            color: white;
+            padding: 18px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            text-transform: uppercase;
+            box-shadow: 0 5px 15px rgba(0, 136, 204, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 136, 204, 0.6);
+        }
+
+        /* Pulsing Animation to draw attention */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 136, 204, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 136, 204, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 136, 204, 0); }
+        }
+        
+        .cta-button {
+            animation: pulse 2s infinite;
+        }
+
+        /* FEATURES GRID */
+        .features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            text-align: left;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .icon {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        /* SAFETY FOOTER (Critical for Anti-Ban) */
+        footer {
+            background: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+            font-size: 11px;
+            color: #777;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .footer-links {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #555;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .disclaimer {
+            line-height: 1.4;
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1 class="logo">Tipping <span class="highlight">Point</span></h1>
+        </header>
+
+        <div class="hero">
+            <h2>Get Expert Sports Analysis & Previews</h2>
+            <p class="sub-headline">Join India's smartest community of sports fans. Data-driven insights for Cricket & Tennis, every single day.</p>
+
+            <a href="https://t.me/+I63LMPSjFvwxOGU1" class="cta-button">
+                Join Free Channel ↗
+            </a>
+
+            <div class="features">
+                <div class="feature-item">
+                    <span class="icon">🏏</span> Cricket Pitch Reports & XI
+                </div>
+                <div class="feature-item">
+                    <span class="icon">🎾</span> Tennis H2H & Surface Stats
+                </div>
+                <div class="feature-item">
+                    <span class="icon">📊</span> Daily Data-Driven Updates
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a> | 
+                <a href="#">Terms of Service</a> | 
+                <a href="#">Contact</a>
+            </div>
+            <div class="disclaimer">
+                <strong>Disclaimer:</strong> This platform is for informational and educational purposes only. We provide statistics and match analysis based on publicly available data. We do not support or promote illegal betting or gambling. Please act responsibly.
+            </div>
+            <br>
+            <p>&copy; 2025 Tipping Point Analysis. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
